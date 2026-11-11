@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="160" height="160" viewBox="0 0 160 160">
+  <defs>
+    <pattern id="jali" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M10 1 L19 10 L10 19 L1 10 Z" fill="none" stroke="#d6935f" stroke-width="0.8"/>
+      <path d="M10 6 L14 10 L10 14 L6 10 Z" fill="none" stroke="#d6935f" stroke-width="0.6"/>
+      <circle cx="10" cy="10" r="1" fill="#d6935f"/>
+    </pattern>
+  </defs>
+  <rect width="160" height="160" fill="url(#jali)" opacity="0.55"/>
+</svg>

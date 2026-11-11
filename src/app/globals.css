@@ -1,0 +1,119 @@
+@import "tailwindcss";
+
+/* ---------- SHONGO design tokens ----------
+   কালার কোড আনুমানিক (ডিজাইন থেকে); Figma-র hex পেলে এখানে বদলে দিলেই পুরো সাইটে মিলে যাবে। */
+@theme {
+  /* Brand / copper */
+  --color-copper-50: #fbf1e8;
+  --color-copper-100: #f6e2d0;
+  --color-copper-200: #eecaa7;
+  --color-copper-300: #e3ad7e;
+  --color-copper-400: #d6935f;
+  --color-copper-500: #c98a58;
+  /* primary buttons, accents */
+  --color-copper-600: #b5744a;
+  --color-copper-700: #96603e;
+
+  /* Cream surfaces */
+  --color-cream-50: #fffdf9;
+  --color-cream-100: #fcf8f1;
+  /* page background */
+  --color-cream-200: #f7efe3;
+  --color-cream-300: #f0e3d1;
+
+  /* Text */
+  --color-ink-900: #2a1f17;
+  /* headings */
+  --color-ink-700: #4a3c31;
+  --color-ink-500: #7a6a5c;
+  /* body / muted */
+  --color-ink-300: #b9ab9d;
+
+  /* Misc */
+  --color-line: #ecdfcf;
+
+  /* Fonts (next/font এর CSS variable) */
+  --font-serif: var(--font-newsreader), "Times New Roman", serif;
+  --font-sans: var(--font-dm-sans), system-ui, sans-serif;
+
+  /* Radius & shadow */
+  --radius-card: 1rem;
+  --radius-pill: 999px;
+  --shadow-card: 0 8px 24px -10px rgb(150 96 62 / 0.28);
+  --shadow-soft: 0 20px 50px -20px rgb(150 96 62 / 0.35);
+
+  /* Container */
+  --container-page: 1200px;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-cream-100);
+    color: var(--color-ink-700);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-serif);
+    color: var(--color-ink-900);
+    letter-spacing: -0.01em;
+  }
+}
+
+@layer utilities {
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@layer components {
+  .container-page {
+    width: 100%;
+    max-width: var(--container-page);
+    margin-inline: auto;
+    padding-inline: 1.25rem;
+  }
+
+  @media (min-width: 768px) {
+    .container-page {
+      padding-inline: 2rem;
+    }
+  }
+
+  /* হালকা ওয়ার্ম গ্রেডিয়েন্ট (hero ও footer) */
+  .bg-warm-gradient {
+    background-image: linear-gradient(135deg,
+        var(--color-copper-100) 0%,
+        var(--color-cream-100) 55%);
+  }
+}
+
+@keyframes heroFade {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-hero-fade {
+  animation: heroFade 0.7s ease-out both;
+}
