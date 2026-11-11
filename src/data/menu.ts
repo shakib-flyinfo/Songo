@@ -11,9 +11,8 @@ export const menuCategories: MenuCategory[] = [
 
 const desc = "Seasoned with mustard oil, fresh herbs and hand-ground spices.";
 
-// ছবি বদলাতে চাইলে src/data/images.ts এ লিংক বদলাও
 export const menuItems: MenuItem[] = [
-  { id: "s1", categoryId: "starters", name: "Bhorta & Starters", description: desc, price: 650, image: images.menu.bhortastarters, tag: "Chef's Signature" },
+  { id: "s1", categoryId: "starters", name: "Bhorta & Starters", description: desc, price: 650, image: images.menu.bhortaStarters, tag: "Chef's Signature" },
   { id: "s2", categoryId: "starters", name: "Shorshe Ilish", description: desc, price: 1450, image: images.menu.shorsheIlish, tag: "Chef's Signature" },
   { id: "s3", categoryId: "starters", name: "Bhorta Platter", description: desc, price: 850, image: images.menu.bhortaPlatter, tag: "Chef's Signature" },
   { id: "s4", categoryId: "starters", name: "Chingri Malaikari", description: desc, price: 1650, image: images.menu.chingriMalaikari, tag: "Local Favorite" },
@@ -34,5 +33,5 @@ export const menuItems: MenuItem[] = [
 
   { id: "k1", categoryId: "drinks", name: "Sylheti Seven-Layer Tea", description: desc, price: 320, image: images.menu.tea },
   { id: "k2", categoryId: "drinks", name: "Borhani", description: desc, price: 220, image: images.menu.borhani },
-  { id: "k3", categoryId: "drinks", name: "Lebu Pani", description: desc, price: 180, image: images.menu.lebuca },
+  { id: "k3", categoryId: "drinks", name: "Lebu Pani", description: desc, price: 180, image: images.menu.lebuPani },
 ];
