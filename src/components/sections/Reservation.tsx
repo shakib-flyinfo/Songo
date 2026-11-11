@@ -202,7 +202,7 @@ export default function Reservation() {
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
             <div className="absolute bottom-8 left-8 right-8">
               <p className="font-serif text-2xl italic text-white drop-shadow-md md:text-3xl">
-                "Where every meal becomes a memory."
+                {'"Where every meal becomes a memory."'}
               </p>
               <span className="mt-2 block text-[12px] font-semibold uppercase tracking-widest text-white/80">
                 — SHONGO Dining

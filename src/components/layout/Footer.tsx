@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Facebook, Instagram, Twitter, Youtube, MapPin, Clock, ArrowRight } from "lucide-react";
+import { Facebook, Instagram, Twitter, Youtube, MapPin,  ArrowRight } from "lucide-react";
 import Logo from "@/components/ui/Logo";
 import { siteInfo } from "@/data/siteInfo";
 

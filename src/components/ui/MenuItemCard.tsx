@@ -1,18 +1,26 @@
 import Image from "next/image";
 import { Plus, Image as ImageIcon } from "lucide-react";
 
-export default function MenuItemCard({ item }: { item: any }) {
-  // চেক করা হচ্ছে ছবির লিংক আছে কি না
-  const hasImage = item.image && item.image.trim() !== "";
+interface MenuItem {
+  image?: string;
+  name: string;
+  description?: string;
+  price?: string | number;
+  tag?: string;
+}
+
+export default function MenuItemCard({ item }: { item: MenuItem }) {
+  // ছবির লিংক আছে কি না চেক করা হচ্ছে
+  const imageSrc = item.image?.trim() || undefined;
 
   return (
     <div className="group flex flex-col overflow-hidden rounded-2xl border border-ink-900/5 bg-white p-2.5 shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:border-copper-200">
-      
+
       {/* ইমেজ সেকশন */}
       <div className="relative aspect-[4/3] w-full overflow-hidden rounded-xl bg-ink-100">
-        {hasImage ? (
+        {imageSrc ? (
           <Image
-            src={item.image}
+            src={imageSrc}
             alt={item.name}
             fill
             className="object-cover transition-transform duration-700 group-hover:scale-105"
